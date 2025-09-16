@@ -13,6 +13,17 @@ alias find='fdfind'
 alias grep='rg'
 alias lg='lazygit'
 alias ..='cd ..'
+alias apt=nala
+alias diff='diff --color=auto'
+alias hack='cd /home/kali/offsec && sudo openvpn universal.ovpn'
+alias install='sudo nala install'
+alias ip='ip --color=auto'
+alias listen='nc -nvlp 4242'
+alias server='python3 -m http.server 80'
+alias sudo='sudo '
+alias update='sudo nala update'
+alias upgrade='sudo nala full-upgrade'
+alias vim=nvim
 
 # fzf Integration
 set -gx FZF_DEFAULT_COMMAND 'fdfind --type f'
