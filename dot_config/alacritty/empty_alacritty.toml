@@ -1,0 +1,35 @@
+[window]
+opacity = 0.95
+startup_mode = "Maximized"
+decorations = "Full"
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 22.0
+
+[font.normal]
+family = "Iosevka Nerd Font"
+
+[terminal.shell]
+program = "/usr/bin/fish"
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.normal]
+black =   "#21222c"
+red =     "#ff5555"
+green =   "#50fa7b"
+yellow =  "#f1fa8c"
+blue =    "#bd93f9"
+magenta = "#ff79c6"
+cyan =    "#8be9fd"
+white =   "#bfbfbf"
