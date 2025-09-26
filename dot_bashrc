@@ -134,6 +134,14 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias listen='nc -lnvp'
+alias ss='ss -ntplu'
+alias sudo='sudo '
+alias startssh='sudo systemctl start ssh'
+alias stopssh='sudo systemctl stop ssh'
+alias startap='sudo systemctl start apache2'
+alias stopap='sudo systemctl stop apache2'
+alias reload='source ~/.bashrc'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
