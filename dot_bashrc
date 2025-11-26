@@ -166,3 +166,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 eval "$(starship init bash)"
+
+MY_IP=192.168.45.198

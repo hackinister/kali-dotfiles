@@ -33,3 +33,17 @@ blue =    "#bd93f9"
 magenta = "#ff79c6"
 cyan =    "#8be9fd"
 white =   "#bfbfbf"
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+{ key = "F", mods = "Control|Shift", action = "ToggleFullscreen"},
+{ key= "Q", mods = "Control|Shift", action = "Quit"}
+]
+
