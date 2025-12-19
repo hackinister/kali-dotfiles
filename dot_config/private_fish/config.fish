@@ -39,4 +39,4 @@ set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 
 set -gx fish_greeting ""
-starship init fish | source
+# starship init fish | source
