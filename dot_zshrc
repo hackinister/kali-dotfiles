@@ -1,4 +1,4 @@
-# ~/.zshrc file for zsh interactive shells.
+~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 fastfetch
 
@@ -270,4 +270,63 @@ export PATH=$PATH:$GOPATH/bin
 source <(fzf --zsh)
 
 eval "$(zoxide init zsh)"
+
+
+### TLOGGER FINAL CLEAN START ###
+
+export DISABLE_AUTO_TITLE=true
+setopt promptsubst
+export TLOGGER_AUTOSTART=1
+
+tun0_ip() {
+  ip -4 addr show tun0 2>/dev/null | awk '/inet /{print $2}' | cut -d/ -f1
+}
+
+configure_prompt() {
+  PROMPT=$'%F{blue}┌──%f(%F{red}%n%f㉿%F{green}%m%f)-[%F{cyan}%~%f] [%F{yellow}$(TZ=UTC date "+%Y-%m-%d %H:%M:%S UTC")%f] [%F{magenta}tun0:$(tun0_ip)%f]\n%F{blue}└─%f$ '
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd configure_prompt
+
+tlogger_start() {
+  [[ -n "$TLOGGER_ACTIVE" ]] && return
+  export TLOGGER_LOG="$HOME/Desktop/logs/session_$(date -u +%Y%m%d_%H%M%S)_UTC.log"
+  export TLOGGER_ACTIVE=1
+  echo "[+] Logging started"
+  echo "[+] Log file: $TLOGGER_LOG"
+}
+
+tlogger_stop() {
+  unset TLOGGER_ACTIVE
+  exec >/dev/tty 2>&1
+  echo "[+] Logging stopped"
+}
+
+tlogger_preexec() {
+  [[ -n "$TLOGGER_ACTIVE" ]] || return
+
+  {
+    printf "\n┌──(%s㉿%s)-[%s] [%s] [tun0:%s]\n"       "$USER" "$HOST" "${PWD/#$HOME/~}"       "$(TZ=UTC date '+%Y-%m-%d %H:%M:%S UTC')"       "$(tun0_ip)"
+    printf "└─$ %s\n" "$1"
+  } >> "$TLOGGER_LOG"
+
+  exec > >(
+    tee >(       sed -r         -e 's/\x1B\][^\a]*\a//g'         -e 's/\x1B\[[0-9;]*[a-zA-Z]//g'         >> "$TLOGGER_LOG"
+    )
+  ) 2>&1
+}
+
+tlogger_precmd() {
+  if [[ "$TLOGGER_AUTOSTART" -eq 1 && -z "$TLOGGER_ACTIVE" ]]; then
+    tlogger_start
+  fi
+  [[ -n "$TLOGGER_ACTIVE" ]] || return
+  exec >/dev/tty 2>&1
+}
+
+add-zsh-hook preexec tlogger_preexec
+add-zsh-hook precmd tlogger_precmd
+
+### TLOGGER FINAL CLEAN END ###
 

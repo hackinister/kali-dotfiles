@@ -17,7 +17,6 @@ alias apt=nala
 alias diff='diff --color=auto'
 alias hack='cd /home/kali/offsec && sudo openvpn universal.ovpn'
 alias install='sudo nala install'
-alias ip='ip -c'
 alias ipa='ip -c -br a'
 alias listen='rlwrap nc -nvlp'
 alias server='python3 -m http.server 80'
@@ -26,6 +25,7 @@ alias sudo='sudo '
 alias update='sudo nala update'
 alias upgrade='sudo nala full-upgrade'
 alias vim=nvim
+alias r='source /home/kali/.config/fish/config.fish'
 
 # chezmoi Aliase
 alias cm='chezmoi'
