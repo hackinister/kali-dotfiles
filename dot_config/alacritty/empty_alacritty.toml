@@ -1,7 +1,10 @@
 [window]
-opacity = 0.95
+
+decorations = "Buttonless"
+
+opacity = 0.8
+blur = true
 startup_mode = "Maximized"
-decorations = "Full"
 
 [window.padding]
 x = 10
@@ -20,20 +23,6 @@ program = "/usr/bin/fish"
 history = 100000
 multiplier = 3
 
-[colors.primary]
-background = "#282a36"
-foreground = "#f8f8f2"
-
-[colors.normal]
-black =   "#21222c"
-red =     "#ff5555"
-green =   "#50fa7b"
-yellow =  "#f1fa8c"
-blue =    "#bd93f9"
-magenta = "#ff79c6"
-cyan =    "#8be9fd"
-white =   "#bfbfbf"
-
 [selection]
 save_to_clipboard = true
 
@@ -45,5 +34,10 @@ bindings = [
 { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
 { key = "F", mods = "Control|Shift", action = "ToggleFullscreen"},
 { key= "Q", mods = "Control|Shift", action = "Quit"}
+]
+
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/coolnight.toml"
 ]
 
