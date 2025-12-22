@@ -2,16 +2,15 @@
 
 decorations = "Buttonless"
 
-opacity = 0.8
-blur = true
+opacity = 1.0
 startup_mode = "Maximized"
 
 [window.padding]
-x = 10
-y = 10
+x = 5
+y = 5
 
 [font]
-size = 22.0
+size = 20.0
 
 [font.normal]
 family = "Iosevka Nerd Font"
