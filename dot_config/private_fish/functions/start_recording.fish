@@ -6,11 +6,9 @@ function start_recording
     set cast_file $recordings_dir/session_$timestamp.cast
 
     echo "Starting recording: $cast_file"
-    echo "Exit with 'exit' or Ctrl+D to stop and clean"
+    echo "Exit with 'exit' or Ctrl+D to stop"
 
-    asciinema -q -i 1.5 $cast_file
-
-    # Globale Variable setzen, die es ermöglicht in Prompt einen Recoding Indicator anzuzeigen.
+    asciinema rec -q -i 0.5 $cast_file
 
     echo "Finished recording"
 end
