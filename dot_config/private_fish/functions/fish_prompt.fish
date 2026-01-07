@@ -1,8 +1,8 @@
 function fish_prompt
     set -l last_status $status
     set -l stat
-
-    
+    set -l tun0_addr (tun0_ip)
+    set -l utc_time (date -u +"%H:%M UTC")
 
     if test $last_status -ne 0
         set stat (set_color -o red)"[$last_status]"(set_color normal)
@@ -29,6 +29,16 @@ function fish_prompt
     echo -n ":"
     set_color green
     echo -n (prompt_pwd --full-length-dirs 2)
+    set_color -o normal    
+    echo -n "["
+    set_color -o yellow
+    echo -n $utc_time
+    set_color -o normal
+    echo -n "● "
+    set_color -o magenta
+    echo -n "($tun0_addr)"
+    set_color -o normal
+    echo -n "]"
     set_color -o yellow
     echo -n $stat
     echo 
