@@ -41,5 +41,19 @@ config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/assets/b
 --Scrollback
 config.scrollback_lines = 50000
 
+-- keybindings
+config.keys = {
+	{
+		key = "b",
+		mods = "SUPER",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "h",
+		mods = "SUPER",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
