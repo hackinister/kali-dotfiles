@@ -29,7 +29,7 @@ alias r='source /home/kali/.config/fish/config.fish'
 
 # chezmoi Aliase
 alias cm='chezmoi'
-alias cme='chezmoi edit'
+alias cme='chezmoi edit --watch'
 alias cmap='chezmoi apply'
 alias cmad='chezmoi add'
 
