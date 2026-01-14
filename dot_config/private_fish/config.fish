@@ -5,6 +5,8 @@ end
 # Set Path
 set -Ux PATH $HOME/.local/bin $PATH
 set -Ux fifc_editor nvim
+set -U fifc_keybinding \cx
+
 # Aliases
 
 alias ls='eza -al --color=always --group-directories-first --icons'
