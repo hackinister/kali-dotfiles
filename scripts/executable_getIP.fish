@@ -5,6 +5,6 @@ if ip -n "$ip"
 	echo " $ip"
 	set -Ux LIP "$ip"
 else
-	echo ""
+	echo "   "
 end
 
