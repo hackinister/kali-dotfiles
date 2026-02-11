@@ -17,7 +17,7 @@ alias lg='lazygit'
 alias ..='cd ..'
 alias apt=nala
 alias diff='diff --color=auto'
-alias hack='cd /home/kali/offsec && sudo openvpn universal.ovpn'
+alias hack='cd /home/kali/offsec && sudo openvpn machines_eu-2.ovpn'
 alias install='sudo nala install'
 alias ipa='ip -c -br a'
 alias listen='rlwrap nc -nvlp'
