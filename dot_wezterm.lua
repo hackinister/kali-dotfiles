@@ -64,7 +64,7 @@ config.keys = {
 		action = wezterm.action.CloseCurrentTab,
 	},
 	{ key = "f", mods = "CTRL|SHIFT", action = wezterm.action.ToggleFullScreen },
-	{ key = "s", mods = "SHIFT|CTRL", action = wezterm.action.Search },
+	--	{ key = "s", mods = "SHIFT|CTRL", action = wezterm.action.Search },
 }
 
 -- and finally, return the configuration to wezterm
