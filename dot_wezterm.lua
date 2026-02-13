@@ -44,8 +44,8 @@ config.scrollback_lines = 50000
 -- keybindings
 config.keys = {
 	{
-		key = "b",
-		mods = "SUPER",
+		key = "o",
+		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
