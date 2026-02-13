@@ -42,6 +42,7 @@ config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/assets/b
 config.scrollback_lines = 50000
 
 -- keybindings
+local act = wezterm.action
 config.keys = {
 	{
 		key = "o",
