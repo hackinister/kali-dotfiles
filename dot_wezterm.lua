@@ -58,6 +58,11 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.QuitApplication,
 	},
+	{
+		key = "w",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.CloseCurrentTab,
+	},
 }
 
 -- and finally, return the configuration to wezterm
