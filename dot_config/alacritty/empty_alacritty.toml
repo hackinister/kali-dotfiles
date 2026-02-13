@@ -32,7 +32,8 @@ hide_when_typing = true
 bindings = [
 { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
 { key = "F", mods = "Control|Shift", action = "ToggleFullscreen"},
-{ key= "Q", mods = "Control|Shift", action = "Quit"}
+{ key= "Q", mods = "Control|Shift", action = "Quit"},
+{ key= "S", mods = "Control|Shift", mode = "~Search" ,  action = "SearchForward"}
 ]
 
 [general]
