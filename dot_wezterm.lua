@@ -69,11 +69,6 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = act.ToggleFullScreen,
 	},
-	{
-		key = "S",
-		mods = "CTRL|SHIFT",
-		action = act.Search("CurrentSelectionOrEmptyString"),
-	},
 }
 
 -- and finally, return the configuration to wezterm
