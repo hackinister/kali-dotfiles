@@ -62,12 +62,17 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.CloseCurrentTab,
+		action = act.CloseCurrentTab({ confirm = false }),
 	},
 	{
 		key = "f",
 		mods = "CTRL|SHIFT",
 		action = act.ToggleFullScreen,
+	},
+	{
+		key = "s",
+		mods = "CTRL|SHIFT",
+		action = act.Search("CurrentSelectionOrEmptyString"),
 	},
 }
 
