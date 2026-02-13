@@ -74,6 +74,7 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = act.Search("CurrentSelectionOrEmptyString"),
 	},
+	{ key = "Enter", mods = "SHIFT|CTRL", action = act.TogglePaneZoomState },
 }
 
 -- and finally, return the configuration to wezterm
