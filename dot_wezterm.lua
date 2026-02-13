@@ -70,7 +70,7 @@ config.keys = {
 		action = act.ToggleFullScreen,
 	},
 	{
-		key = "s",
+		key = "S",
 		mods = "CTRL|SHIFT",
 		action = act.Search("CurrentSelectionOrEmptyString"),
 	},
