@@ -72,7 +72,7 @@ config.keys = {
 	{
 		key = "s",
 		mods = "CTRL|SHIFT",
-		action = act.Search,
+		action = act.Search("CurrentSelectionOrEmptyString"),
 	},
 }
 
