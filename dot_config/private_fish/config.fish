@@ -9,7 +9,7 @@ set -U fifc_keybinding \cx
 
 # Aliases
 
-alias ls='eza -al --color=always --group-directories-first --icons'
+alias ls='eza -al --color=always --group-directories-first --icons --hyperlink'
 alias cat='batcat --paging=never'
 alias find='fdfind'
 alias grep='rg'
