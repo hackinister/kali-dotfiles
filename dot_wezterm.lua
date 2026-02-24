@@ -7,14 +7,12 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 wezterm.on("gui-startup", function(cmd)
-	local tab1, pane1, window = mux.spawn_window(cmd or {})
+	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
-	tab1:set_title("Kali")
-	pane1:split({ size = 0.5, cwd = "/home/kali/HTB" })
-	pane1:split({ direction = "Bottom" })
-	local tab2, pane2 = window.spawn_tab({ cwd = "/home/kali/HTB" })
-	tab2:set_title("Victim")
-	tab1:activate()
+	tab:set_title("Kali")
+	pane:split({ size = 0.5, cwd = "/home/kali/HTB" })
+	pane:split({ direction = "Bottom" })
+	window:spawn_tab({ cwd = "/home/kali/HTB", set_title = "Victim" })
 end)
 
 config.colors = {
