@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
-	pane:split({ size = 0.5 })
+	pane:split({ size = 0.5, cwd = "/home/kali/HTB" })
 	pane:split({ direction = "Bottom" })
 end)
 
