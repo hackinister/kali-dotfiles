@@ -42,7 +42,6 @@ config.window_padding = {
 }
 config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/assets/bg-blurred-darker.png"
 -- config.window_background_opacity = 0.8
--- config.macos_window_background_blur = 10
 
 --Scrollback
 config.scrollback_lines = 50000
@@ -116,7 +115,6 @@ wezterm.on("open-uri", function(window, pane, uri)
 					pane:send_text(wezterm.shell_join_args({
 						"ls",
 						"-a",
-						"-p",
 						"--group-directories-first",
 					}) .. "\r")
 					return false
