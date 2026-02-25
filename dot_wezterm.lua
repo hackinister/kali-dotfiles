@@ -21,7 +21,7 @@ end)
 
 wezterm.on("format-tab-title", function(tab)
 	local index = tab.tab_index + 1
-	local title = tab.active_pane.title
+	local title = tab.title
 	local zoom_icon = ""
 
 	if tab.is_active and tab.active_pane.is_zoomed then
