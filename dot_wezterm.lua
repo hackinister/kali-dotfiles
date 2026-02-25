@@ -17,6 +17,25 @@ wezterm.on("gui-startup", function(cmd)
 	tab:activate()
 end)
 
+-- tab title mo to have zoom icon
+
+wezterm.on("format-tab-title", function(tab)
+	local index = tab.tab_index + 1
+	local title = tab.active_pane.title
+	local zoom_icon = ""
+
+	if tab.is_active and tab.active_pane.is_zoomed then
+		zoom_icon = "() "
+	end
+
+	local formatted_title = string.format(" %s%d: %s ", zoom_icon, index, title)
+
+	return {
+
+		{ Text = formatted_title },
+	}
+end)
+
 config.colors = {
 	foreground = "#CBE0F0",
 	background = "#011423",
