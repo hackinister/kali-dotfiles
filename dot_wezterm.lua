@@ -12,7 +12,8 @@ wezterm.on("gui-startup", function(cmd)
 	tab:set_title("Kali")
 	pane:split({ size = 0.5, cwd = "/home/kali/HTB" })
 	pane:split({ direction = "Bottom" })
-	window:spawn_tab({ cwd = "/home/kali/HTB", set_title = "Victim" })
+	local tab2 = window:spawn_tab({ cwd = "/home/kali/HTB" })
+	tab:activate()
 end)
 
 config.colors = {
