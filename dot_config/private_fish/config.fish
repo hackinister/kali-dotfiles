@@ -11,10 +11,6 @@ set -U fifc_keybinding \cx
 
 alias ls='eza -al --color=always --group-directories-first --icons --hyperlink'
 alias cat='batcat --paging=never'
-alias find='fdfind'
-alias grep='rg'
-alias lg='lazygit'
-alias ..='cd ..'
 alias apt=nala
 alias diff='diff --color=auto'
 alias install='sudo nala install'
