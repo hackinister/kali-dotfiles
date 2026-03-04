@@ -28,12 +28,6 @@ alias upgrade='sudo nala full-upgrade'
 alias vim=nvim
 alias r='source /home/kali/.config/fish/config.fish'
 
-# chezmoi Aliase
-alias cm='chezmoi'
-alias cme='chezmoi edit --watch'
-alias cmap='chezmoi apply'
-alias cmad='chezmoi add'
-
 # fzf Integration
 set -gx FZF_DEFAULT_COMMAND 'fdfind --type f'
 set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
