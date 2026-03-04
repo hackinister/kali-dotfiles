@@ -8,11 +8,8 @@ set -Ux fifc_editor nvim
 set -U fifc_keybinding \cx
 
 # Aliases
-
 alias ls='eza -al --color=always --group-directories-first --icons --hyperlink'
 alias cat='batcat --paging=never'
-alias apt=nala
-alias diff='diff --color=auto'
 alias install='sudo nala install'
 alias ipa='ip -c -br a'
 alias listen='rlwrap nc -nvlp'
@@ -21,8 +18,6 @@ alias serverPort='updog -p'
 alias sudo='sudo '
 alias update='sudo nala update'
 alias upgrade='sudo nala full-upgrade'
-alias vim=nvim
-alias r='source /home/kali/.config/fish/config.fish'
 
 # fzf Integration
 set -gx FZF_DEFAULT_COMMAND 'fdfind --type f'
