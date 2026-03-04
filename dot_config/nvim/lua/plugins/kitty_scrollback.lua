@@ -1,0 +1,2 @@
+require('kitty-scrollback').setup()
+

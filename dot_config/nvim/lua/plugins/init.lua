@@ -1,0 +1,11 @@
+require("plugins.pack")
+require("plugins.treesitter")
+require("plugins.nvim_tree")
+require("plugins.fzf")
+require("plugins.mini")
+require("plugins.gitsigns")
+require("plugins.mason")
+require("plugins.kitty_scrollback")
+require("plugins.comments")
+require("plugins.alpha")
+
