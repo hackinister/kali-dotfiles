@@ -26,3 +26,7 @@ set -gx FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 
 set -gx fish_greeting ""
 # starship init fish | source
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/kali/.local/bin" $PATH
