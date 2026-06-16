@@ -6,18 +6,17 @@ abbr -a !f --position anywhere --function __pick_file
 function __pick_vpn
     set -l file (command ls /home/kali/hackingVPNs | fzf)
     if test -n "$file"
-        echo "sudo openvpn /home/kali/hackingVPNs/$file" 
+        echo "sudo openvpn /home/kali/hackingVPNs/$file"
     end
 end
 abbr -a hack --position command --function __pick_vpn
 
-# Navigation mit cd 
+# Navigation mit cd
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-# 
 function __pick_dir
   fd --type d | fzf
 end
@@ -43,3 +42,6 @@ abbr -a cmf --position command --function __pick_chezmoi_forget
 
 # Kitty Terminal
 abbr --add icat "kitten icat"
+
+# Tool installation with uv
+abbr -a uvti "uv tool install"
